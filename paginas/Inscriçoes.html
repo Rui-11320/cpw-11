@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inscriçoes para o clube de informática-Atividades</title>
+</head>
+
+<body> 
+<form action="../index.html" method="POST">
+  <div>
+    <label for="email">Email *</label><br>
+    <input type="email" id="email" name="email" required>
+  </div>
+
+  <div>
+    <label for="oficina">Escolha uma oficina *</label><br>
+    <select id="oficina" name="oficina" required>
+      <option value="">Escolha uma oficina</option>
+      <option value="Robótica">Robótica</option>
+      <option value="Programação">Programação</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="mensagem">Mensagem</label><br>
+    <textarea id="mensagem" name="mensagem" rows="3"></textarea>
+  </div>
+
+  <div>
+    <label for="nome">Nome *</label><br>
+    <input type="text" id="nome" name="nome" required>
+  </div>
+
+  <div style="margin-top: 10px;">
+    <button type="submit">Testar inscrição</button>
+  </div>
+</form>
+
+<a href="../index.html">Voltar para a página inicial</a>
+</html>
+
