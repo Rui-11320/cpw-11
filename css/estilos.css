@@ -1,0 +1,20 @@
+
+body {
+  background-color: #ffffff;
+  
+  font-family: Arial, sans-serif;
+  margin: 24px;
+}
+
+h1 { color: #215a89; }
+a { color: #174f78; }
+
+
+
+
+
+.destaque {
+
+  background-color: #0568be;
+  font-weight: bold;
+}
