@@ -7,61 +7,64 @@
     <title>Inscriçoes para o clube de informática-Atividades</title>
   </head>
 
-  <body> 
+  <body>
     <article class="cartao">
-      <article class="cartao3">
-        <span class="destaque">Inscrições abertas!</span>
+      
+        <nav class="menu-navegacao">
+          <a href="../index.html">Home</a>
+          <a href="atividades.html">Atividades</a>
+          <a href="inscriçoes.html">Inscrições</a>
+          <a href="perfil.html">Perfil</a>
+          <a href="https://moodle.csmiguel.pt">Moodle</a>
+        </nav>
+      
+
+        <article class="cartao2">
+            <form id="formInscricao">
+              <div>
+                <label for="email">Email *</label><br>
+                <input type="email" id="email" name="email" required>
+              </div>
+
+              <div>
+                <label for="oficina">Escolha uma oficina *</label><br>
+                <select id="oficina" name="oficina" required>
+                  <option value="">Escolha uma oficina</option>
+                  <option value="Robótica">Robótica</option>
+                  <option value="Programação">Programação</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="mensagem">Mensagem</label><br>
+                <textarea id="mensagem" name="mensagem" rows="3"></textarea>
+              </div>
+
+              <div>
+                <label for="nome">Nome *</label><br>
+                <input type="text" id="nome" name="nome" required>
+              </div>
+
+              <div style="margin-top: 10px;">
+                <button type="submit">Testar inscrição</button>
+              </div>
+            </form>
+        </article>
       </article>
+      <script>
+          document.getElementById('formInscricao').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio tradicional
 
+            // Guarda cada dado na memória do navegador
+            localStorage.setItem('userNome', document.getElementById('nome').value);
+            localStorage.setItem('userEmail', document.getElementById('email').value);
+            localStorage.setItem('userOficina', document.getElementById('oficina').value);
+            localStorage.setItem('userMensagem', document.getElementById('mensagem').value);
 
-      <article class="cartao2">
-          <form id="formInscricao">
-            <div>
-              <label for="email">Email *</label><br>
-              <input type="email" id="email" name="email" required>
-            </div>
-
-            <div>
-              <label for="oficina">Escolha uma oficina *</label><br>
-              <select id="oficina" name="oficina" required>
-                <option value="">Escolha uma oficina</option>
-                <option value="Robótica">Robótica</option>
-                <option value="Programação">Programação</option>
-              </select>
-            </div>
-
-            <div>
-              <label for="mensagem">Mensagem</label><br>
-              <textarea id="mensagem" name="mensagem" rows="3"></textarea>
-            </div>
-
-            <div>
-              <label for="nome">Nome *</label><br>
-              <input type="text" id="nome" name="nome" required>
-            </div>
-
-            <div style="margin-top: 10px;">
-              <button type="submit">Testar inscrição</button>
-            </div>
-          </form>
-
-          <a href="../index.html">Voltar para a página inicial</a>
-      </article>
-    </article>
-    <script>
-        document.getElementById('formInscricao').addEventListener('submit', function(event) {
-          event.preventDefault(); // Impede o envio tradicional
-
-          // Guarda cada dado na memória do navegador
-          localStorage.setItem('userNome', document.getElementById('nome').value);
-          localStorage.setItem('userEmail', document.getElementById('email').value);
-          localStorage.setItem('userOficina', document.getElementById('oficina').value);
-          localStorage.setItem('userMensagem', document.getElementById('mensagem').value);
-
-          // Redireciona para a página de perfil
-          window.location.href = 'perfil.html';
-        });
-      </script>
+            // Redireciona para a página de perfil
+            window.location.href = 'perfil.html';
+          });
+        </script>
   </body>
 </html>
 
