@@ -9,12 +9,104 @@ body {
 h1 { color: #215a89; }
 a { color: #174f78; }
 
+.cartao {
+  background-color: #ffffffbe;
+  padding: 32px;
+  border: 6px solid #215a89;
+  margin-bottom: 32px;
+  border-radius: 12px;
+}
+.cartao2 {
+
+  padding: 25px;
+  border: 6px dashed #8f2626;
+  margin-bottom: 32px;
+  border-radius: 1px;
+  margin-top: 15px;
+  width: 32%;
+}
+
+.cartao3 {
+  padding: 25px;
+  border: 6px solid #26548f;
+  margin-bottom: 32px;
+  border-radius: 1px;
+  margin-top: 15px;
+  width: 10%;
+}
+ 
+
+<!-- Novo estilo para o menu lateral fixo e o cartão principal -->    ´
+
+{
+  background-color: #ada1a1;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+{
+  background-color: #f4f6f9;
+  font-family: sans-serif;
+  margin: 0;
+  display: flex;
+}
 
 
 
 
-.destaque {
 
-  background-color: #0568be;
+
+  
+/* Menu lateral fixo à esquerda, a ocupar de cima a baixo */
+body {
+  background-color: #f4f6f9;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu lateral fixo de alto a baixo */
+.menu-navegacao {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;              /* Largura fixa do menu */
+  height: 100vh;             /* Ocupa a altura toda do ecrã */
+  background-color: #2c4d75;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.menu-navegacao a {
+  color: #ffffff;
+  text-decoration: none;
   font-weight: bold;
+  font-size: 16px;
+}
+
+.menu-navegacao a:hover {
+  opacity: 0.8;
+}
+
+/* O Cartão principal: empurrado para a direita do menu e centrado no espaço livre */
+.cartao4 {
+  margin-left: 200px;                    /* Começa exatamente onde o menu acaba */
+  width: calc(100% - 200px);             /* Ocupa o restante espaço da janela */
+  box-sizing: border-box;
+  padding: 30px;
+  
+  /* Se quiseres que o conteúdo não fique demasiado largo, centra dentro desta área: */
+  max-width: 950px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: auto;
+  
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }

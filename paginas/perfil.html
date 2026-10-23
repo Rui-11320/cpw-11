@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perfil do Utilizador</title>
+</head>
+
+<body> 
+  <article class="cartao">
+    <nav class="menu-navegacao">
+      <a href="../index.html">Home</a>
+      <a href="paginas/atividades.html">Atividades</a>
+      <a href="Inscriçoes.html">Inscrições</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="https://moodle.csmiguel.pt/mod/assign/view.php?id=44308">Moodle </a>
+    </nav>
+    
+
+
+
+   
+
+    <article class="cartao2">
+      <p><strong>Nome:</strong> <span id="resNome"></span></p>
+      <p><strong>Email:</strong> <span id="resEmail"></span></p>
+      <p><strong>Oficina:</strong> <span id="resOficina"></span></p>
+      <p><strong>Mensagem:</strong> <span id="resMensagem"></span></p>
+
+      <br>
+      <a href="../index.html">Voltar para a página inicial</a>
+    </article>
+  </article>
+
+  <!-- Script que lê os dados guardados no computador -->
+  <script>
+    document.getElementById('resNome').textContent = localStorage.getItem('userNome') || 'Ainda não inscrito';
+    document.getElementById('resEmail').textContent = localStorage.getItem('userEmail') || 'Ainda não inscrito';
+    document.getElementById('resOficina').textContent = localStorage.getItem('userOficina') || 'Nenhuma';
+    document.getElementById('resMensagem').textContent = localStorage.getItem('userMensagem') || 'Nenhuma';
+  </script>
+</body>
+</html>
