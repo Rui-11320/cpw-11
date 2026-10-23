@@ -1,0 +1,33 @@
+/* Garante que, quando NÃO está em dark-mode, o fundo assume a cor correta */
+html:not(.dark-mode), 
+body:not(.dark-mode) {
+  background-color: #ada1a1 !important;
+}
+
+/* Classes ativadas pelo JavaScript para o Dark Mode */
+html.dark-mode, body.dark-mode {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
+}
+body.dark-mode .cartao,
+body.dark-mode .cartao2,
+body.dark-mode .cartao3 {
+  background-color: #1e1e1e !important;
+  color: #e0e0e0 !important;
+  border-color: #333333 !important;
+}
+
+body.dark-mode .menu-navegacao {
+  background-color: #1a1a1a !important;
+  border-color: #333333 !important;
+}
+
+body.dark-mode .menu-navegacao a {
+  color: #ffffff !important;
+}
+
+body.dark-mode button[type="submit"],
+body.dark-mode #botao-tema {
+  background-color: #333333 !important;
+  color: #ffffff !important;
+}

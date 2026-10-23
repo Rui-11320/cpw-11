@@ -1,7 +1,15 @@
 <!doctype html>
 <html lang="pt-PT">
 <head>
+ <script>
+  if (localStorage.getItem("darkMode") === "true") {
+    // Força o fundo a ficar escuro instantaneamente antes de desenhar a página
+    document.write('<style>html, body { background-color: #121212 !important; color: #e0e0e0 !important; }</style>');
+    document.documentElement.classList.add("dark-mode");
+  }
+</script>
   <link rel="stylesheet" href="../css/estilos.css"> 
+  <link rel="stylesheet" href="../css/darkmode.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Clube de informática-Atividades</title>
@@ -15,6 +23,7 @@
       <a href="Inscriçoes.html">Inscrições</a>
       <a href="perfil.html">Perfil</a>
       <a href="https://moodle.csmiguel.pt/mod/assign/view.php?id=44308">Moodle </a>
+      <button id="botao-tema" onclick="alternarTema()">🌙 Dark Mode</button>
     </nav>
 
   <h2>Oficina de fotografia</h2>
@@ -53,12 +62,6 @@
       </tr>
     </tbody>
   </table>
-
-
-
-
-  <p><a href="Inscriçoes.html">Ir para a página de inscrições</a></p>
-  <p><a href="../index.html">Voltar à página inicial</a></p>
-  <p><a href="perfil.html">Ir para a página de perfil</a></p>
 </article>
+<script src="../main.js/script.js"></script>
 </body>

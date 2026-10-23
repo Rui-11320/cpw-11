@@ -1,7 +1,8 @@
 
 body {
-  background-color: #ada1a1;
-  font-family: comic sans ms, sans-serif;
+  background-color: #ada1a1; 
+  color: #222222;            
+  font-family: "Comic Sans MS", sans-serif;
   margin: 24px;
 }
 .cartao {
@@ -35,7 +36,8 @@ body {
   top: 24px;                        /* Distância do topo da janela */
   left: 15px;                       /* Distância da esquerda da janela */ 
   width: 200px;                     /* Largura fixa do menu */
-  height: 100vh;                    /* Ocupa a altura toda do ecrã */
+  height: calc(100vh - 40px);       /* Ocupa a altura toda menos a margem de cima e baixo */
+  min-height: 500px;                
   background-color: #ffffffbe;    /* Cor de fundo do menu */
   padding: 30px 20px;               /* Espaçamento interno do menu */
   display: flex;                    /* Usa flexbox para organizar os links */ 
@@ -54,16 +56,30 @@ body {
   opacity: 0.7;                     /* Efeito visual ao passar o mouse sobre os links */
 }
 
-/* .cartao_exemplo {
-  margin-left: 200px;                    /* Começa exatamente onde o menu acaba */
-  width: calc(100% - 200px);             /* Ocupa o restante espaço da janela */
-  box-sizing: border-box;                /* Inclui o padding na largura total do cartão */
-  padding: 30px;                         /* Espaçamento interno do cartão */
-  max-width: 950px;                      /* Limita a largura máxima do cartão */
-  margin-top: 20px;                      /* Espaço acima do cartão */
-  margin-bottom: 20px;                   /* Espaço abaixo do cartão */
-  margin-right: auto;                    /* Centraliza o cartão horizontalmente */ 
-  background-color: #ffffff;
-  border-radius: 8px;                    /* Bordas arredondadas do cartão */
-  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.1);    /* Adiciona uma sombra suave ao cartão */
-}   */
+button[type="submit"] {
+  background-color: #dadb83;             /* Cor de fundo igual ao teu menu */
+  color: #000000;                        /* Texto a branco */
+  border: none;                            /* Remove a borda cinzenta antiga */
+  padding: 10px 20px;                      /* Espaçamento interno para o botão ficar maior */
+  font-size: 16px;                         /* Tamanho da letra */
+  font-weight: bold;                       /* Texto em negrito */
+  border-radius: 6px;                      /* Cantos ligeiramente arredondados */
+  cursor: pointer;                         /* Transforma o cursor numa mãozinha ao passar por cima */
+  transition: background-color 0.2s ease;  /* Animação suave ao passar o rato */
+}
+
+/* Efeito ao passar o rato por cima do botão */
+button[type="submit"]:hover {
+  opacity: 0.7;                
+}
+#botao-tema {
+  margin-top: auto !important; /* Força o botão a ir para o fundo */
+  background-color: #333333;
+  color: #ffffff;
+  border: 1px solid #555555;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
