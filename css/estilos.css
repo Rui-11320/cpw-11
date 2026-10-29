@@ -7,7 +7,7 @@
 
 
 body {
-  background-color: #ada1a1; 
+  background-color: #ca1313; 
   color: #222222;            
   font-family: "Comic Sans MS", sans-serif;
   margin: 24px;
@@ -17,7 +17,7 @@ body {
   padding: 32px;
   border: 6px solid #215a89;
   margin-bottom: 32px;
-  border-radius: 12px;
+  border-radius: 60px;
   margin-left: 210px;
   flex: 1 1 220px;
   gap: 20px;
@@ -27,7 +27,7 @@ body {
   padding: 25px;
   border: 6px dashed #8f2626;
   margin-bottom: 32px;
-  border-radius: 1px;
+  border-radius: 60px;
   margin-top: 15px;
   width: 32%;
   flex: 1 1 220px;
@@ -38,16 +38,29 @@ body {
   padding: 25px;
   border: 6px solid #26548f;
   margin-bottom: 32px;
-  border-radius: 1px;
+  border-radius: 60px;
   margin-top: 15px;
   width: 10%;
   flex: 1 1 220px;
   gap: 20px;
   flex-wrap: wrap;
 }
+
+.cartao4 {
+  padding: 25px;
+  border: 6px solid #26548f;
+  margin-bottom: 32px;
+  border-radius: 60px;
+  margin-top: 15px;
+  width: 10%;
+  flex: 1 1 220px;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 70%;
+}
 .menu-navegacao {
   border: 6px solid #215a89;
-  border-radius: 12px;
+  border-radius: 60px;
   position: fixed;
   top: 24px;                        /* Distância do topo da janela */
   left: 15px;                       /* Distância da esquerda da janela */ 
