@@ -1,3 +1,10 @@
+.lista-atividades {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+
 
 body {
   background-color: #ada1a1; 
@@ -12,6 +19,9 @@ body {
   margin-bottom: 32px;
   border-radius: 12px;
   margin-left: 210px;
+  flex: 1 1 220px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 .cartao2 {
   padding: 25px;
@@ -20,6 +30,9 @@ body {
   border-radius: 1px;
   margin-top: 15px;
   width: 32%;
+  flex: 1 1 220px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 .cartao3 {
   padding: 25px;
@@ -28,6 +41,9 @@ body {
   border-radius: 1px;
   margin-top: 15px;
   width: 10%;
+  flex: 1 1 220px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 .menu-navegacao {
   border: 6px solid #215a89;
@@ -45,15 +61,20 @@ body {
   gap: 20px;                        /* Espaço entre os links do menu */
   box-sizing: border-box;           /* Inclui o padding na largura total do menu */
   z-index: 10;                      /* Garante que o menu fica acima de outros elementos da página */
+  flex: 1 1 220px;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 .menu-navegacao a {        /* Links internos: o CSS encontra automaticamente os <a> que estão dentro da caixa do menu */
   color: #080808;
   text-decoration: none;            /* Remove o sublinhado dos links */
   font-weight: bold;                /* Deixa os links em negrito */
   font-size: 16px;                  /* Tamanho da fonte dos links */
+  
 }
 .menu-navegacao a:hover {  /* Efeito do rato: aplica-se automaticamente apenas quando o cursor passa por cima dos links que estao com o .menu-navegaçao */
   opacity: 0.7;                     /* Efeito visual ao passar o mouse sobre os links */
+  
 }
 
 button[type="submit"] {
@@ -65,12 +86,14 @@ button[type="submit"] {
   font-weight: bold;                       /* Texto em negrito */
   border-radius: 6px;                      /* Cantos ligeiramente arredondados */
   cursor: pointer;                         /* Transforma o cursor numa mãozinha ao passar por cima */
-  transition: background-color 0.2s ease;  /* Animação suave ao passar o rato */
+  transition: background-color 0.2s ease;  /* Animação suave ao passar o rato */~
+  
 }
 
 /* Efeito ao passar o rato por cima do botão */
 button[type="submit"]:hover {
-  opacity: 0.7;                
+  opacity: 0.7;  
+  flex: 1 1 220px;        
 }
 #botao-tema {
   margin-top: auto !important; /* Força o botão a ir para o fundo */
@@ -82,4 +105,7 @@ button[type="submit"]:hover {
   font-weight: bold;
   border-radius: 6px;
   cursor: pointer;
+ 
 }
+
+
