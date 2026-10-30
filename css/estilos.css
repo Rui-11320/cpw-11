@@ -1,124 +1,196 @@
-.lista-atividades {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
 
-
+/* ==========================================
+   1. ESTILOS GERAIS
+========================================== */
 
 body {
-  background-color: #ca1313; 
-  color: #222222;            
-  font-family: "Comic Sans MS", sans-serif;
-  margin: 24px;
+    background-color: #ca1313;
+    color: #222222;
+    font-family: "Comic Sans MS", sans-serif;
+    margin: 24px;
 }
+
+
+/* ==========================================
+   2. LISTA DE ATIVIDADES
+========================================== */
+
+.lista-atividades {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+
+/* ==========================================
+   3. IMAGEM RESPONSIVA
+========================================== */
+
+.imagem-responsiva {
+    width: 30vw;
+    max-width: 400px;
+    height: auto;
+}
+
+
+/* ==========================================
+   4. CARTÕES
+========================================== */
+
 .cartao {
-  background-color: #ffffffbe;
-  padding: 32px;
-  border: 6px solid #215a89;
-  margin-bottom: 32px;
-  border-radius: 60px;
-  margin-left: 210px;
-  flex: 1 1 220px;
-  gap: 20px;
-  flex-wrap: wrap;
+    background-color: #F3E6D5;
+    padding: 32px;
+    border: 6px solid #59452D;
+    margin-bottom: 32px;
+    border-radius: 60px;
+    margin-left: 210px;
+    flex: 1 1 220px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
+
 .cartao2 {
-  padding: 25px;
-  border: 6px dashed #8f2626;
-  margin-bottom: 32px;
-  border-radius: 60px;
-  margin-top: 15px;
-  width: 32%;
-  flex: 1 1 220px;
-  gap: 20px;
-  flex-wrap: wrap;
+    padding: 25px;
+    border: 6px dashed #59452D;
+    margin-bottom: 32px;
+    border-radius: 60px;
+    margin-top: 15px;
+    width: 32%;
+    flex: 1 1 220px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
+
 .cartao3 {
-  padding: 25px;
-  border: 6px solid #26548f;
-  margin-bottom: 32px;
-  border-radius: 60px;
-  margin-top: 15px;
-  width: 10%;
-  flex: 1 1 220px;
-  gap: 20px;
-  flex-wrap: wrap;
+    padding: 25px;
+    border: 6px solid #59452D;
+    margin-bottom: 32px;
+    border-radius: 60px;
+    margin-top: 15px;
+    width: 10%;
+    flex: 1 1 220px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .cartao4 {
-  padding: 25px;
-  border: 6px solid #26548f;
-  margin-bottom: 32px;
-  border-radius: 60px;
-  margin-top: 15px;
-  width: 10%;
-  flex: 1 1 220px;
-  gap: 20px;
-  flex-wrap: wrap;
-  width: 70%;
+    padding: 25px;
+    border: 6px solid #59452D;
+    background-color: #FFF8EF;
+    margin-bottom: 32px;
+    border-radius: 60px;
 }
+
+
+/* ==========================================
+   5. MENU DE NAVEGAÇÃO
+========================================== */
+
 .menu-navegacao {
-  border: 6px solid #215a89;
-  border-radius: 60px;
-  position: fixed;
-  top: 24px;                        /* Distância do topo da janela */
-  left: 15px;                       /* Distância da esquerda da janela */ 
-  width: 200px;                     /* Largura fixa do menu */
-  height: calc(100vh - 40px);       /* Ocupa a altura toda menos a margem de cima e baixo */
-  min-height: 500px;                
-  background-color: #ffffffbe;    /* Cor de fundo do menu */
-  padding: 30px 20px;               /* Espaçamento interno do menu */
-  display: flex;                    /* Usa flexbox para organizar os links */ 
-  flex-direction: column;           /* Coloca os links em coluna */
-  gap: 20px;                        /* Espaço entre os links do menu */
-  box-sizing: border-box;           /* Inclui o padding na largura total do menu */
-  z-index: 10;                      /* Garante que o menu fica acima de outros elementos da página */
-  flex: 1 1 220px;
-  gap: 20px;
-  flex-wrap: wrap;
+    border: 6px solid #59452D;
+    border-radius: 60px;
+
+    position: fixed;
+    top: 24px;
+    left: 15px;
+
+    width: 200px;
+    height: calc(100vh - 40px);
+    min-height: 500px;
+
+    background-color: #F3E6D5;
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    box-sizing: border-box;
+    z-index: 10;
+
+    flex: 1 1 220px;
+    flex-wrap: wrap;
 }
-.menu-navegacao a {        /* Links internos: o CSS encontra automaticamente os <a> que estão dentro da caixa do menu */
-  color: #080808;
-  text-decoration: none;            /* Remove o sublinhado dos links */
-  font-weight: bold;                /* Deixa os links em negrito */
-  font-size: 16px;                  /* Tamanho da fonte dos links */
-  
+
+.menu-navegacao a {
+    color: #080808;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
 }
-.menu-navegacao a:hover {  /* Efeito do rato: aplica-se automaticamente apenas quando o cursor passa por cima dos links que estao com o .menu-navegaçao */
-  opacity: 0.7;                     /* Efeito visual ao passar o mouse sobre os links */
-  
+
+.menu-navegacao a:hover {
+    opacity: 0.7;
 }
+
+
+/* ==========================================
+   6. BOTÕES
+========================================== */
 
 button[type="submit"] {
-  background-color: #dadb83;             /* Cor de fundo igual ao teu menu */
-  color: #000000;                        /* Texto a branco */
-  border: none;                            /* Remove a borda cinzenta antiga */
-  padding: 10px 20px;                      /* Espaçamento interno para o botão ficar maior */
-  font-size: 16px;                         /* Tamanho da letra */
-  font-weight: bold;                       /* Texto em negrito */
-  border-radius: 6px;                      /* Cantos ligeiramente arredondados */
-  cursor: pointer;                         /* Transforma o cursor numa mãozinha ao passar por cima */
-  transition: background-color 0.2s ease;  /* Animação suave ao passar o rato */~
-  
+    background-color: #dadb83;
+    color: #000000;
+
+    border: none;
+    padding: 10px 20px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    border-radius: 6px;
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
 }
 
-/* Efeito ao passar o rato por cima do botão */
 button[type="submit"]:hover {
-  opacity: 0.7;  
-  flex: 1 1 220px;        
+    opacity: 0.7;
+    flex: 1 1 220px;
 }
+
+
+/* ==========================================
+   7. BOTÃO DE MODO ESCURO
+========================================== */
+
 #botao-tema {
-  margin-top: auto !important; /* Força o botão a ir para o fundo */
-  background-color: #333333;
-  color: #ffffff;
-  border: 1px solid #555555;
-  padding: 10px;
-  font-size: 14px;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
- 
+    margin-top: auto !important;
+
+    background-color: #59452D;
+    color: #ffffff;
+
+    border: 1px solid #000000;
+    border-radius: 6px;
+
+    padding: 10px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
 }
 
 
+/* ==========================================
+   8. SESSÃO FLEXBOX
+========================================== */
+
+.sessao {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 24px;
+}
+
+.sessao-info {
+    flex: 2 1 200px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.sessao-material {
+    flex: 1 1 200px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}

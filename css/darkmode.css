@@ -1,7 +1,7 @@
 /* Garante que, quando NÃO está em dark-mode, o fundo assume a cor correta */
 html:not(.dark-mode), 
 body:not(.dark-mode) {
-  background-color: #ada1a1 !important;
+  background-color: #CBAE8F !important;
 }
 
 /* Classes ativadas pelo JavaScript para o Dark Mode */
