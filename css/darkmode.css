@@ -1,33 +1,67 @@
-/* Garante que, quando NÃO está em dark-mode, o fundo assume a cor correta */
-html:not(.dark-mode), 
-body:not(.dark-mode) {
+/* ==========================================
+   MODO CLARO
+========================================== */
+
+html:not(.dark-mode),
+html:not(.dark-mode) body {
   background-color: #CBAE8F !important;
+  color: #222222;
 }
 
-/* Classes ativadas pelo JavaScript para o Dark Mode */
-html.dark-mode, body.dark-mode {
+/* ==========================================
+   MODO ESCURO
+========================================== */
+
+/* O html é a referência principal do tema.
+   Assim, o modo escuro funciona mesmo antes de o JavaScript
+   conseguir adicionar a classe ao body. */
+html.dark-mode,
+html.dark-mode body {
   background-color: #121212 !important;
   color: #e0e0e0 !important;
 }
-body.dark-mode .cartao,
-body.dark-mode .cartao2,
-body.dark-mode .cartao3 {
+
+/* Cartões */
+html.dark-mode body .cartao,
+html.dark-mode body .cartao2,
+html.dark-mode body .cartao3,
+html.dark-mode body .cartao4 {
   background-color: #1e1e1e !important;
   color: #e0e0e0 !important;
   border-color: #333333 !important;
 }
 
-body.dark-mode .menu-navegacao {
+/* Menu de navegação */
+html.dark-mode body .menu-navegacao {
   background-color: #1a1a1a !important;
   border-color: #333333 !important;
 }
 
-body.dark-mode .menu-navegacao a {
+html.dark-mode body .menu-navegacao a {
   color: #ffffff !important;
 }
 
-body.dark-mode button[type="submit"],
-body.dark-mode #botao-tema {
+/* Botões */
+html.dark-mode body button[type="submit"],
+html.dark-mode body #botao-tema {
   background-color: #333333 !important;
   color: #ffffff !important;
+  border-color: #555555 !important;
+}
+
+/* Campos do formulário */
+html.dark-mode body input,
+html.dark-mode body select,
+html.dark-mode body textarea {
+  background-color: #2b2b2b !important;
+  color: #e0e0e0 !important;
+  border-color: #555555 !important;
+}
+
+/* Tabelas */
+html.dark-mode body table,
+html.dark-mode body th,
+html.dark-mode body td {
+  color: #e0e0e0 !important;
+  border-color: #555555 !important;
 }
