@@ -1,32 +1,25 @@
-// 2. Função que alterna o tema e guarda a escolha na memória do browser
-// Quando a página carrega
-document.addEventListener("DOMContentLoaded", () => {               //Esta linha diz ao navegador: "Fica à espera até que a página HTML esteja completamente carregada e pronta a ser exibida".
-  const modoEscuroAtivo = localStorage.getItem("darkMode");
+// Aplica o tema guardado no navegador e mantém o botão sincronizado.
+function aplicarTema(modoEscuro) {
+  document.documentElement.classList.toggle("dark-mode", modoEscuro);
+  document.body.classList.toggle("dark-mode", modoEscuro);
+
   const botao = document.getElementById("botao-tema");
 
-  if (modoEscuroAtivo === "true") {
-    document.documentElement.classList.add("dark-mode");
-    document.body.classList.add("dark-mode");
-    if (botao) botao.textContent = "☀️ Light Mode";
+  if (botao) {
+    botao.textContent = modoEscuro ? "☀️ Light Mode" : "🌙 Dark Mode";
   }
+}
+
+// Ao abrir qualquer página, recupera a preferência guardada.
+document.addEventListener("DOMContentLoaded", () => {
+  const modoEscuroAtivo = localStorage.getItem("darkMode") === "true";
+  aplicarTema(modoEscuroAtivo);
 });
 
-// Função que alterna o tema
+// Alterna o tema e guarda imediatamente a escolha para as outras páginas.
 function alternarTema() {
-  const isDark = document.body.classList.toggle("dark-mode");
-  document.documentElement.classList.toggle("dark-mode", isDark);
-  
-  const botao = document.getElementById("botao-tema");
-  
-  if (isDark) {
-    localStorage.setItem("darkMode", "true");
-    if (botao) botao.textContent = "☀️ Light Mode";
-    // Força o fundo escuro
-    document.body.style.backgroundColor = ""; 
-  } else {
-    localStorage.setItem("darkMode", "false");
-    if (botao) botao.textContent = "🌙 Dark Mode";
-    // Limpa qualquer restrição de cor para voltar ao Light Mode original
-    document.body.style.backgroundColor = "";
-  }
+  const modoEscuroAtivo = !document.documentElement.classList.contains("dark-mode");
+
+  localStorage.setItem("darkMode", String(modoEscuroAtivo));
+  aplicarTema(modoEscuroAtivo);
 }

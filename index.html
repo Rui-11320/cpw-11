@@ -1,13 +1,7 @@
 <!doctype html>
 <html lang="pt-PT">
 <head>
- <script>
-  if (localStorage.getItem("darkMode") === "true") {
-    // Força o fundo a ficar escuro instantaneamente antes de desenhar a página
-    document.write('<style>html, body { background-color: #121212 !important; color: #e0e0e0 !important; }</style>');
-    document.documentElement.classList.add("dark-mode");
-  }
-</script>
+ 
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="css/darkmode.css">
   <meta charset="utf-8">
@@ -55,9 +49,13 @@
         <li>Criação de Animações</li>
       </ol>
       <figure>
-        <img src="imagens/oficina.png"
+         <article>
+        <img
+            src="imagens/oficina.png"
             alt="Ciclo do clube: planear, construir, testar e regressar ao planeamento para melhorar."
-            width="600" height="240">
+            class="imagem-responsiva"
+        >
+    </article>
         <figcaption>
           <h5>
             Como desenvolvemos os projetos.<br>
@@ -66,6 +64,24 @@
         </figcaption>
       </figure>
 
+<section class="sessao">
+    <div class="sessao-info">
+        <h2>Sessão de criação de um site</h2>
+        <p>
+            Nesta sessão vamos aprender a organizar uma página web,
+            utilizando HTML e CSS para criar um site simples.
+        </p>
+    </div>
+
+    <div class="sessao-material">
+        <h3>Materiais necessários</h3>
+        <ul>
+            <li>Computador</li>
+            <li>Ligação à internet</li>
+            <li>Editor de código</li>
+        </ul>
+    </div>
+</section>
     </article>
     <script src="main.js/script.js"></script>
 </body>
