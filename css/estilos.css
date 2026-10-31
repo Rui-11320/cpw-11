@@ -79,6 +79,9 @@ body {
     background-color: #FFF8EF;
     margin-bottom: 32px;
     border-radius: 60px;
+    flex: 1 1 0;
+    min-width: 0;
+    box-sizing: border-box;
 }
 
 
