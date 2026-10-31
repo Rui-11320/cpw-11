@@ -79,14 +79,6 @@ body {
     background-color: #FFF8EF;
     margin-bottom: 32px;
     border-radius: 60px;
-
-    width: max-content;
-    flex: 0 0 auto;
-    box-sizing: border-box;
-}
-
-.cartao4 p {
-    white-space: nowrap;
 }
 
 
